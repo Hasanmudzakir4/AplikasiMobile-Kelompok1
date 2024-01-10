@@ -1,6 +1,6 @@
 // ignore_for_file: sort_child_properties_last
 
-import 'package:firebase_crud/pages/dashboard_page.dart.dart';
+import 'package:firebase_crud/pages/dashboard_page.dart';
 import 'package:firebase_crud/pages/histories_page.dart';
 import 'package:firebase_crud/pages/laporan_page.dart';
 import 'package:firebase_crud/pages/profile_page.dart';

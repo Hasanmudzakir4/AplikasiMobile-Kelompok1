@@ -57,15 +57,11 @@ class _HistoriesState extends State<Histories> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         GestureDetector(
-                            onTap: () {
-                              ammountController.text = ds["Ammount"];
-                              notesController.text = ds["Notes"];
-                              categoryController.text = ds["Category"];
-                              dateController.text = ds["Date"];
-                              descriptionController.text = ds["Description"];
-                              updateEmployeeDetails(ds["Id"]);
-                            },
-                            child: Icon(Icons.remove_red_eye)),
+                            onTap: () {},
+                            child: Icon(
+                              Icons.remove_red_eye,
+                              color: Colors.blue,
+                            )),
                         SizedBox(
                           width: 12,
                         ),
@@ -78,7 +74,10 @@ class _HistoriesState extends State<Histories> {
                               descriptionController.text = ds["Description"];
                               updateEmployeeDetails(ds["Id"]);
                             },
-                            child: Icon(Icons.edit)),
+                            child: Icon(
+                              Icons.edit,
+                              color: Colors.green,
+                            )),
                         SizedBox(
                           width: 12,
                         ),
@@ -91,7 +90,10 @@ class _HistoriesState extends State<Histories> {
                                     .deleteEmployeeDetails(ds["Id"]);
                               }
                             },
-                            child: Icon(Icons.delete)),
+                            child: Icon(
+                              Icons.delete,
+                              color: Colors.red,
+                            )),
                       ],
                     ),
                     title: Text(ds["Ammount"]),
@@ -180,39 +182,39 @@ class _HistoriesState extends State<Histories> {
                   children: [
                     Row(
                       children: [
-                        GestureDetector(
-                            onTap: () {
-                              Navigator.pop(context);
-                            },
-                            child: Icon(Icons.cancel)),
-                        SizedBox(
-                          width: 30.0,
-                        ),
                         Text(
                           "Update",
                           style: TextStyle(
                               color: Colors.blue,
-                              fontSize: 24.0,
+                              fontSize: 22.0,
                               fontWeight: FontWeight.bold),
                         ),
                         Text(
                           " Transaksi",
                           style: TextStyle(
-                            color: Colors.yellow,
-                            fontSize: 24.0,
+                            color: Colors.blue,
+                            fontSize: 22.0,
                             fontWeight: FontWeight.bold,
                           ),
-                        )
+                        ),
+                        SizedBox(
+                          width: 50.0,
+                        ),
+                        GestureDetector(
+                            onTap: () {
+                              Navigator.pop(context);
+                            },
+                            child: Icon(Icons.cancel)),
                       ],
                     ),
                     SizedBox(
-                      height: 20.0,
+                      height: 10.0,
                     ),
                     Text(
                       "Ammount",
                       style: TextStyle(
                         color: Colors.black,
-                        fontSize: 20.0,
+                        fontSize: 15.0,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -236,7 +238,7 @@ class _HistoriesState extends State<Histories> {
                       "Notes",
                       style: TextStyle(
                         color: Colors.black,
-                        fontSize: 20.0,
+                        fontSize: 15.0,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -260,7 +262,7 @@ class _HistoriesState extends State<Histories> {
                       "Category",
                       style: TextStyle(
                         color: Colors.black,
-                        fontSize: 20.0,
+                        fontSize: 15.0,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -284,7 +286,7 @@ class _HistoriesState extends State<Histories> {
                       "Date",
                       style: TextStyle(
                         color: Colors.black,
-                        fontSize: 20.0,
+                        fontSize: 15.0,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -308,7 +310,7 @@ class _HistoriesState extends State<Histories> {
                       "Description",
                       style: TextStyle(
                         color: Colors.black,
-                        fontSize: 20.0,
+                        fontSize: 15.0,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -326,7 +328,7 @@ class _HistoriesState extends State<Histories> {
                       ),
                     ),
                     SizedBox(
-                      height: 30.0,
+                      height: 25.0,
                     ),
                     Center(
                         child: ElevatedButton(
